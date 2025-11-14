@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mission Secret Santa</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+  <!-- Optional: nice Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="home">
+  <div class="center-layout">
+    <header class="hero">
+      <div class="hero-icon">🎁</div>
+      <h1 class="hero-title">
+        <span>Mission</span>
+        <span class="accent">Secret Santa</span>
+      </h1>
+      <p class="hero-subtitle">
+        Connecting Secret Santas with kids in need this Christmas
+      </p>
+    </header>
+
+    <main>
+      <section class="bags-section">
+        <div class="sled-bar"></div>
+
+        <div class="bags-container">
+          <!-- Donate bag -->
+          <div class="bag-card" data-target="donate.html" tabindex="0" aria-label="Go to Donate page">
+            <img src="assets/bag-donate.png" alt="Red gift bag for Donate" class="bag-image" />
+            <div class="bag-label">
+              <h2>Donate</h2>
+              <p>Choose a child and make their Christmas magical.</p>
+            </div>
+          </div>
+
+          <!-- Our Mission bag -->
+          <div class="bag-card" data-target="mission.html" tabindex="0" aria-label="Go to Our Mission page">
+            <img src="assets/bag-mission.png" alt="Red gift bag for Our Mission" class="bag-image" />
+            <div class="bag-label">
+              <h2>Our Mission</h2>
+              <p>Learn how we're spreading joy this holiday season.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
