@@ -1,4 +1,3 @@
-// Make the bags on the home page clickable
 document.addEventListener("DOMContentLoaded", () => {
   const bagCards = document.querySelectorAll(".bag-card");
 
@@ -20,27 +19,42 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+});
 
-  // Simple proof-of-concept tracking on donate page:
-  // clicking "Sponsor this child" flips the status badge.
-  const sponsorButtons = document.querySelectorAll(".sponsor-btn");
+document.addEventListener("DOMContentLoaded", () => {
+  const container = document.getElementById("children-grid");
 
-  sponsorButtons.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const card = btn.closest(".child-card");
-      if (!card) return;
+  fetch("children.txt")
+    .then(response => response.text())
+    .then(text => {
+      const lines = text.trim().split("\n");
 
-      const statusBadge = card.querySelector(".status-badge");
-      const currentStatus = card.getAttribute("data-status");
+      lines.forEach(line => {
+        if (!line.includes("|")) return;
 
-      if (currentStatus === "available") {
-        card.setAttribute("data-status", "sponsored");
-        statusBadge.textContent = "Sponsored";
-        statusBadge.classList.remove("status-available");
-        statusBadge.classList.add("status-sponsored");
-        btn.textContent = "Already sponsored";
-        btn.disabled = true;
-      }
+        const [avatar, title, about, link, status] = line.split("|");
+
+        const card = document.createElement("article");
+        card.classList.add("child-card");
+        card.dataset.status = status;
+
+        card.innerHTML = `
+          <div class="child-avatar">${avatar}</div>
+          <div class="child-info">
+            <h2>${title}</h2>
+            <p class="child-about">${about}</p>
+            <a href="${link}" class="btn-secondary" target="_blank" rel="noopener">
+              View Amazon Wish List
+            </a>
+            <div class="child-status">
+              <span class="status-badge ${
+                status == "available" ? "status-available" : "status-sponsored"
+              }">${status == "available" ? "Available" : "Sponsored"}</span>
+            </div>
+          </div>
+        `;
+
+        container.appendChild(card);
+      });
     });
-  });
 });

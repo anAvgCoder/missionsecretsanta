@@ -78,14 +78,16 @@ body.home {
   margin: 0 auto;
 }
 
+
+
 .sled-bar {
   width: 260px;
   height: 10px;
   border-radius: 999px;
-  background: linear-gradient(90deg, #8b4513, #c9721f);
+  background-color: #8b4513; /* choose any brown you want */
   margin: 16px auto 24px;
-  box-shadow: 0 6px 12px rgba(148, 81, 32, 0.35);
 }
+
 
 /* Holds both cards */
 .bags-container {
@@ -96,41 +98,6 @@ body.home {
   margin-bottom: 16px;
 }
 
-/* Each bag card */
-.bag-card {
-  position: relative;
-  width: 220px;
-  padding: 20px 18px 22px;
-  cursor: pointer;
-  border-radius: 26px;
-  background: #ffffff;
-  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
-  display: flex;
-  flex-direction: column;
-  align-items: center;      /* center horizontally */
-  text-align: center;
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
-  outline: none;
-}
-
-.bag-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 26px 60px rgba(15, 23, 42, 0.18);
-}
-
-.bag-card:focus-visible {
-  box-shadow: 0 0 0 3px #f97316;
-}
-
-/* Bag image */
-.bag-image {
-  width: 80%;
-  max-width: 150px;        /* don’t upscale beyond this */
-  height: auto;
-  object-fit: contain;
-  filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.25));
-  margin-bottom: 12px;
-}
 
 /* Text under the bag */
 .bag-label {
@@ -226,10 +193,11 @@ nav .nav-link.active {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #e11d48, #fb923c);
+  background: #e11d48;   /* solid red */
   color: #ffffff;
   box-shadow: 0 8px 20px rgba(248, 113, 113, 0.45);
 }
+
 
 .btn-primary:disabled {
   opacity: 0.6;
@@ -314,7 +282,7 @@ nav .nav-link.active {
   width: 100%;
   padding: 20px 16px;
   border-radius: 16px;
-  background: linear-gradient(135deg, #e11d48, #fb923c);
+  background: #e11d48;
   color: #ffffff;
   text-align: center;
   margin-bottom: 24px;
@@ -364,11 +332,6 @@ nav .nav-link.active {
     font-size: 2.1rem;
   }
 
-  .bag-card {
-    width: 200px;
-    padding: 18px 16px 20px;
-  }
-
   .bag-image {
     max-width: 135px;
   }
@@ -386,23 +349,6 @@ nav .nav-link.active {
 
 /* === FORCE CENTERING INSIDE THE RECTANGLES === */
 
-.bag-card {
-  /* size / look can stay the same, just make it a centered flex box */
-  display: flex;
-  flex-direction: column;
-  align-items: center;      /* center horizontally */
-  justify-content: center;  /* center vertically */
-  text-align: center;
-  padding: 24px 18px;       /* a bit more even padding top/bottom */
-}
-
-.bag-image {
-  width: 80%;
-  max-width: 150px;
-  height: auto;
-  margin-bottom: 12px;
-}
-
 .bag-label {
   width: 100%;
 }
@@ -413,4 +359,228 @@ nav .nav-link.active {
 
 .bag-label p {
   margin: 0;
+}
+
+/* === HOME BAG CARDS (FINAL VERSION) === */
+
+.bags-section {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 0 16px 8px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* center sled + cards */
+  text-align: center;
+}
+
+/* holds both rectangles */
+.bags-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+}
+
+/* each rectangle */
+.bag-card {
+  width: 230px;
+  min-height: 260px;
+  padding: 24px 20px 26px;
+  border-radius: 26px;
+  background: #ffffff;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
+  cursor: pointer;
+
+  /* center everything inside the rectangle */
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* horizontal centering */
+  justify-content: center;  /* vertical centering */
+  text-align: center;
+
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  outline: none;
+}
+
+.bag-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 26px 60px rgba(15, 23, 42, 0.18);
+}
+
+.bag-card:focus-visible {
+  box-shadow: 0 0 0 3px #f97316;
+}
+
+/* bag image */
+.bag-image {
+  width: 80%;
+  max-width: 150px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.25));
+  margin-bottom: 14px;
+}
+
+/* text under the bag */
+.bag-label {
+  width: 100%;
+  color: #111827;
+}
+
+.bag-label h2 {
+  margin: 0 0 6px;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.bag-label p {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: #6b7280;
+}
+
+/* === SIDE-BY-SIDE CARDS ON DESKTOP === */
+@media (min-width: 768px) {
+  .bags-section {
+    max-width: 620px;              /* wide enough for two cards + gap */
+    margin: 0 auto;
+  }
+
+  .bags-container {
+    display: flex;
+    flex-wrap: nowrap;             /* keep them on one row */
+    justify-content: center;
+    gap: 32px;
+  }
+
+  .bag-card {
+    flex: 0 0 240px;               /* fixed card width */
+  }
+}
+
+/* === ALIGN IMAGES AND TEXT INSIDE EACH CARD === */
+.bag-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;         /* center content vertically in card */
+  text-align: center;
+}
+
+/* same image box size in both cards so headings line up */
+.bag-image {
+  width: 80%;
+  max-width: 150px;
+  height: 150px;                   /* fixed height */
+  object-fit: contain;             /* fit image into that box */
+  margin-bottom: 12px;
+}
+
+/* === FIX: PERFECT SIDE-BY-SIDE ALIGNMENT FOR HOMEPAGE BAGS === */
+
+.bags-section {
+  width: 100%;
+  max-width: 720px;      /* wider so both cards sit side-by-side */
+  margin: 0 auto;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.bags-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;  /* important: top-aligns both cards evenly */
+  gap: 40px;
+  flex-wrap: nowrap;
+}
+
+/* unify card sizing */
+.bag-card {
+  width: 260px;
+  min-height: 290px;
+  background: #fff;
+  border-radius: 26px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;   /* start from top, not center */
+  text-align: center;
+
+  padding: 24px 20px;
+}
+
+/* force both images to occupy the exact same space */
+.bag-image {
+  width: 150px;
+  height: 150px;       /* This is the magic that aligns the titles */
+  object-fit: contain;
+  margin-bottom: 16px;
+}
+
+/* clean, aligned text */
+.bag-label {
+  margin-top: 4px;
+}
+
+.bag-label h2 {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+}
+
+.bag-label p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Make the inner layout of each child card consistent */
+.child-card {
+  display: flex;
+  padding: 16px;
+  border-radius: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 20px rgba(31, 41, 55, 0.08);
+}
+
+.child-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;          /* even spacing between title, about, button, status */
+}
+
+/* Paragraph text cleaner */
+.child-about {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #4b5563;
+}
+
+/* Keep the button text on one line so it doesn't wrap weirdly */
+.btn-secondary {
+  white-space: nowrap;       /* "View Amazon Wish List" stays on one line */
+  padding: 10px 22px;
+  font-size: 0.9rem;
+}
+
+/* Push the status badge to the bottom so layout matches across cards */
+.child-status {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Space between "View Amazon Wish List" and the status badge */
+.btn-secondary {
+  margin-top: 12px;      /* space above the button */
+}
+
+.child-status {
+  margin-top: 14px;      /* space between button and "Available/Sponsored" */
 }
