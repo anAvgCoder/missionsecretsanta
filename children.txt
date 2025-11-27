@@ -1,3 +1,20 @@
-🎄|Boy, Age 7|I love building Lego sets.|https://amazon.com/yourlist1|available
-⭐|Girl, Age 10|I enjoy drawing and music.|https://amazon.com/yourlist2|available
-🎁|Boy, Age 5|I like cars and dinos.|https://amazon.com/yourlist3|available
+⭐|Girl, Age 17|I would love a skincare set this year.|https://amazon.com/yourlist17|available
+🎄|Boy, Age 16|I enjoy using Bluetooth portable speakers.|https://amazon.com/yourlist16|available
+⭐|Girl, Age 15|I like cross-body and belt bags.|https://amazon.com/yourlist15|available
+🎁|Boy, Age 14|I would love a football for playing outside.|https://amazon.com/yourlist14|available
+⭐|Girl, Age 13|I enjoy making friendship bracelets.|https://amazon.com/yourlist13|available
+🎄|Boy, Age 12|I would love a STEM or science kit.|https://amazon.com/yourlist12|available
+⭐|Girl, Age 11|I like Jellycat stuffed animals.|https://amazon.com/yourlist11|available
+⭐|Girl, Age 10|I would love a digital camera.|https://amazon.com/yourlist10|available
+⭐|Girl, Age 9 |I enjoy building Lego sets.|https://amazon.com/yourlist9 |available
+🎄|Boy, Age 8 |I like racing RC cars. Vrmmm Vrmmm.|https://amazon.com/yourlist8 |available
+🎄|Boy, Age 7 |I enjoy Bluey toys and characters.|https://amazon.com/yourlist7 |available
+⭐|Girl, Age 7 |I would love a rock painting kit.|https://amazon.com/yourlist7f|available
+🎄|Boy, Age 6 |I like toy helicopters and airplanes.|https://amazon.com/yourlist6 |available
+⭐|Girl, Age 6 |I enjoy sketch pads and art supplies.|https://amazon.com/yourlist6f|available
+🎁|Boy, Age 5 |I would love something Spiderman.|https://amazon.com/yourlist5 |available
+⭐|Girl, Age 4 |I enjoy LeapFrog learning toys.|https://amazon.com/yourlist4 |available
+🎄|Boy, Age 3 |I like toy barn sets and animals.|https://amazon.com/yourlist3 |available
+⭐|Girl, Age 2 |I enjoy playing with Ms. Rachel toys.|https://amazon.com/yourlist2 |available
+🎄|Boy, Age 1 |I would love age-appropriate baby toys.|https://amazon.com/yourlist1 |available
+⭐|Girl, Age 1 |I would love age-appropriate baby toys.|https://amazon.com/yourlist1f|available

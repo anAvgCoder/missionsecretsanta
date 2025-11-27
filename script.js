@@ -27,12 +27,17 @@ document.addEventListener("DOMContentLoaded", () => {
   fetch("children.txt")
     .then(response => response.text())
     .then(text => {
-      const lines = text.trim().split("\n");
+      // Handle Windows (\r\n) and Unix (\n) line endings
+      const lines = text.trim().split(/\r?\n/);
 
       lines.forEach(line => {
         if (!line.includes("|")) return;
 
-        const [avatar, title, about, link, status] = line.split("|");
+        const [avatar, title, about, link, rawStatus] = line.split("|");
+
+        // Normalize status: remove spaces/\r and lowercase
+        const status = rawStatus.trim().toLowerCase();
+        const isAvailable = status === "available";
 
         const card = document.createElement("article");
         card.classList.add("child-card");
@@ -48,8 +53,8 @@ document.addEventListener("DOMContentLoaded", () => {
             </a>
             <div class="child-status">
               <span class="status-badge ${
-                status == "available" ? "status-available" : "status-sponsored"
-              }">${status == "available" ? "Available" : "Sponsored"}</span>
+                isAvailable ? "status-available" : "status-sponsored"
+              }">${isAvailable ? "Available" : "Sponsored"}</span>
             </div>
           </div>
         `;
