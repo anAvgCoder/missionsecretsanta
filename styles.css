@@ -1,5 +1,3 @@
-/* ========== GLOBAL ========== */
-
 *,
 *::before,
 *::after {
@@ -13,15 +11,13 @@ body {
   background: radial-gradient(circle at top left, #ffeef3, #f7fff7);
 }
 
-/* Home layout – center everything on the screen */
 body.home {
   min-height: 100vh;
   display: flex;
-  justify-content: center;   /* horizontal */
-  align-items: center;       /* vertical */
+  justify-content: center;
+  align-items: center; 
 }
 
-/* Wrapper for all content on the home page */
 .center-layout {
   width: 100%;
   max-width: 960px;
@@ -31,7 +27,6 @@ body.home {
   text-align: center;
 }
 
-/* ========== HERO (HOME) ========== */
 
 .hero {
   margin: 0 0 24px;
@@ -69,7 +64,6 @@ body.home {
   font-size: 1rem;
 }
 
-/* ========== BAGS SECTION (HOME) ========== */
 
 .bags-section {
   width: 100%;
@@ -84,12 +78,11 @@ body.home {
   width: 260px;
   height: 10px;
   border-radius: 999px;
-  background-color: #8b4513; /* choose any brown you want */
+  background-color: #8b4513;
   margin: 16px auto 24px;
 }
 
 
-/* Holds both cards */
 .bags-container {
   display: flex;
   flex-wrap: wrap;
@@ -99,7 +92,6 @@ body.home {
 }
 
 
-/* Text under the bag */
 .bag-label {
   width: 100%;
   color: #111827;
@@ -128,7 +120,6 @@ body.home {
   font-weight: 600;
 }
 
-/* ========== SHARED HEADER FOR INNER PAGES ========== */
 
 .inner-header {
   display: flex;
@@ -158,8 +149,6 @@ nav .nav-link.active {
   color: #e11d48;
 }
 
-/* ========== GENERIC PAGE LAYOUT (DONATE / MISSION) ========== */
-
 .page {
   max-width: 960px;
   margin: 24px auto 40px;
@@ -176,8 +165,6 @@ nav .nav-link.active {
   color: #4b5563;
 }
 
-/* Buttons */
-
 .btn-primary,
 .btn-secondary {
   display: inline-flex;
@@ -193,7 +180,7 @@ nav .nav-link.active {
 }
 
 .btn-primary {
-  background: #e11d48;   /* solid red */
+  background: #e11d48;
   color: #ffffff;
   box-shadow: 0 8px 20px rgba(248, 113, 113, 0.45);
 }
@@ -211,7 +198,6 @@ nav .nav-link.active {
   border: 1px solid #e5e7eb;
 }
 
-/* ========== DONATE PAGE GRID ========== */
 
 .children-grid {
   display: grid;
@@ -276,7 +262,6 @@ nav .nav-link.active {
   color: #b91c1c;
 }
 
-/* ========== MISSION PAGE ========== */
 
 .mission-banner {
   width: 100%;
@@ -325,7 +310,6 @@ nav .nav-link.active {
   color: #4b5563;
 }
 
-/* ========== RESPONSIVE ========== */
 
 @media (max-width: 640px) {
   .hero-title {
@@ -347,7 +331,6 @@ nav .nav-link.active {
   }
 }
 
-/* === FORCE CENTERING INSIDE THE RECTANGLES === */
 
 .bag-label {
   width: 100%;
@@ -361,7 +344,6 @@ nav .nav-link.active {
   margin: 0;
 }
 
-/* === HOME BAG CARDS (FINAL VERSION) === */
 
 .bags-section {
   width: 100%;
@@ -371,11 +353,10 @@ nav .nav-link.active {
 
   display: flex;
   flex-direction: column;
-  align-items: center;   /* center sled + cards */
+  align-items: center;
   text-align: center;
 }
 
-/* holds both rectangles */
 .bags-container {
   display: flex;
   flex-wrap: wrap;
@@ -383,7 +364,6 @@ nav .nav-link.active {
   gap: 32px;
 }
 
-/* each rectangle */
 .bag-card {
   width: 230px;
   min-height: 260px;
@@ -393,11 +373,10 @@ nav .nav-link.active {
   box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
   cursor: pointer;
 
-  /* center everything inside the rectangle */
   display: flex;
   flex-direction: column;
-  align-items: center;      /* horizontal centering */
-  justify-content: center;  /* vertical centering */
+  align-items: center;
+  justify-content: center;
   text-align: center;
 
   transition: transform 0.18s ease, box-shadow 0.18s ease;
@@ -413,7 +392,6 @@ nav .nav-link.active {
   box-shadow: 0 0 0 3px #f97316;
 }
 
-/* bag image */
 .bag-image {
   width: 80%;
   max-width: 150px;
@@ -423,7 +401,6 @@ nav .nav-link.active {
   margin-bottom: 14px;
 }
 
-/* text under the bag */
 .bag-label {
   width: 100%;
   color: #111827;
@@ -442,48 +419,44 @@ nav .nav-link.active {
   color: #6b7280;
 }
 
-/* === SIDE-BY-SIDE CARDS ON DESKTOP === */
 @media (min-width: 768px) {
   .bags-section {
-    max-width: 620px;              /* wide enough for two cards + gap */
+    max-width: 620px;
     margin: 0 auto;
   }
 
   .bags-container {
     display: flex;
-    flex-wrap: nowrap;             /* keep them on one row */
+    flex-wrap: nowrap;
     justify-content: center;
     gap: 32px;
   }
 
   .bag-card {
-    flex: 0 0 240px;               /* fixed card width */
+    flex: 0 0 240px;
   }
 }
 
-/* === ALIGN IMAGES AND TEXT INSIDE EACH CARD === */
 .bag-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;         /* center content vertically in card */
+  justify-content: center;
   text-align: center;
 }
 
-/* same image box size in both cards so headings line up */
 .bag-image {
   width: 80%;
   max-width: 150px;
-  height: 150px;                   /* fixed height */
-  object-fit: contain;             /* fit image into that box */
+  height: 150px;
+  object-fit: contain;
   margin-bottom: 12px;
 }
 
-/* === FIX: PERFECT SIDE-BY-SIDE ALIGNMENT FOR HOMEPAGE BAGS === */
 
 .bags-section {
   width: 100%;
-  max-width: 720px;      /* wider so both cards sit side-by-side */
+  max-width: 720px;
   margin: 0 auto;
   padding-top: 10px;
   text-align: center;
@@ -492,12 +465,11 @@ nav .nav-link.active {
 .bags-container {
   display: flex;
   justify-content: center;
-  align-items: flex-start;  /* important: top-aligns both cards evenly */
+  align-items: flex-start;
   gap: 40px;
   flex-wrap: nowrap;
 }
 
-/* unify card sizing */
 .bag-card {
   width: 260px;
   min-height: 290px;
@@ -508,21 +480,19 @@ nav .nav-link.active {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;   /* start from top, not center */
+  justify-content: flex-start;
   text-align: center;
 
   padding: 24px 20px;
 }
 
-/* force both images to occupy the exact same space */
 .bag-image {
   width: 150px;
-  height: 150px;       /* This is the magic that aligns the titles */
+  height: 150px;
   object-fit: contain;
   margin-bottom: 16px;
 }
 
-/* clean, aligned text */
 .bag-label {
   margin-top: 4px;
 }
@@ -538,7 +508,6 @@ nav .nav-link.active {
   color: #555;
 }
 
-/* Make the inner layout of each child card consistent */
 .child-card {
   display: flex;
   padding: 16px;
@@ -550,10 +519,9 @@ nav .nav-link.active {
 .child-info {
   display: flex;
   flex-direction: column;
-  gap: 10px;          /* even spacing between title, about, button, status */
+  gap: 10px;
 }
 
-/* Paragraph text cleaner */
 .child-about {
   margin: 0;
   font-size: 0.9rem;
@@ -561,14 +529,12 @@ nav .nav-link.active {
   color: #4b5563;
 }
 
-/* Keep the button text on one line so it doesn't wrap weirdly */
 .btn-secondary {
-  white-space: nowrap;       /* "View Amazon Wish List" stays on one line */
+  white-space: nowrap;
   padding: 10px 22px;
   font-size: 0.9rem;
 }
 
-/* Push the status badge to the bottom so layout matches across cards */
 .child-status {
   margin-top: auto;
   display: flex;
@@ -576,13 +542,12 @@ nav .nav-link.active {
   gap: 8px;
 }
 
-/* Space between "View Amazon Wish List" and the status badge */
 .btn-secondary {
-  margin-top: 12px;      /* space above the button */
+  margin-top: 12px;
 }
 
 .child-status {
-  margin-top: 14px;      /* space between button and "Available/Sponsored" */
+  margin-top: 14px;
 }
 
 .partner-strip {
