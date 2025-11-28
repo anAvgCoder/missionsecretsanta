@@ -61,3 +61,23 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const GOAL = 1000;
+  const CURRENT_AMOUNT = 25;
+
+  const amountSpan = document.getElementById("goal-amount");
+  const barFill = document.getElementById("goal-bar-fill");
+
+  if (amountSpan && barFill) {
+    amountSpan.textContent = CURRENT_AMOUNT.toLocaleString();
+    const percent = Math.min(CURRENT_AMOUNT / GOAL, 1) * 100;
+    barFill.style.width = `${percent}%`;
+
+    if (CURRENT_AMOUNT >= GOAL) {
+      barFill.style.background = "#22c55e";
+    } else {
+      barFill.style.background = "#ef4444";
+    }
+  }
+});
