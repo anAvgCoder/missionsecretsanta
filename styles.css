@@ -15,7 +15,7 @@ body.home {
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
 }
 
 .center-layout {
@@ -26,7 +26,6 @@ body.home {
   align-items: center;
   text-align: center;
 }
-
 
 .hero {
   margin: 0 0 24px;
@@ -64,15 +63,16 @@ body.home {
   font-size: 1rem;
 }
 
-
 .bags-section {
   width: 100%;
-  max-width: 520px;
-  padding: 0 16px 8px;
+  max-width: 720px;
   margin: 0 auto;
+  padding: 10px 16px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
-
-
 
 .sled-bar {
   width: 260px;
@@ -82,32 +82,68 @@ body.home {
   margin: 16px auto 24px;
 }
 
-
 .bags-container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 32px;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: nowrap;
+}
+
+.bag-card {
+  width: 260px;
+  min-height: 290px;
+  padding: 24px 20px;
+  border-radius: 26px;
+  background: #ffffff;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  outline: none;
+}
+
+.bag-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 26px 60px rgba(15, 23, 42, 0.18);
+}
+
+.bag-card:focus-visible {
+  box-shadow: 0 0 0 3px #f97316;
+}
+
+.bag-image {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.25));
   margin-bottom: 16px;
 }
 
 
 .bag-label {
   width: 100%;
+  margin-top: 4px;
   color: #111827;
 }
 
 .bag-label h2 {
-  margin: 0 0 6px;
-  font-size: 1.1rem;
+  margin: 0 0 10px;
+  font-size: 1.2rem;
   font-weight: 700;
 }
 
 .bag-label p {
   margin: 0;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   line-height: 1.45;
-  color: #6b7280;
+  color: #555;
 }
 
 .hero-footer {
@@ -119,7 +155,6 @@ body.home {
   color: #e11d48;
   font-weight: 600;
 }
-
 
 .inner-header {
   display: flex;
@@ -185,7 +220,6 @@ nav .nav-link.active {
   box-shadow: 0 8px 20px rgba(248, 113, 113, 0.45);
 }
 
-
 .btn-primary:disabled {
   opacity: 0.6;
   cursor: default;
@@ -196,8 +230,12 @@ nav .nav-link.active {
   background-color: #ffffff;
   color: #111827;
   border: 1px solid #e5e7eb;
-}
 
+  white-space: nowrap;
+  padding: 10px 22px;
+  font-size: 0.9rem;
+  margin-top: 12px;
+}
 
 .children-grid {
   display: grid;
@@ -226,23 +264,29 @@ nav .nav-link.active {
   background: #fef3c7;
 }
 
+.child-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .child-info h2 {
   margin: 0 0 6px;
   font-size: 1.1rem;
 }
 
 .child-about {
-  margin: 0 0 10px;
+  margin: 0;
   font-size: 0.9rem;
+  line-height: 1.5;
   color: #4b5563;
 }
 
 .child-status {
+  margin-top: 14px;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   gap: 8px;
-  margin-top: 8px;
 }
 
 .status-badge {
@@ -261,7 +305,6 @@ nav .nav-link.active {
   background-color: #fee2e2;
   color: #b91c1c;
 }
-
 
 .mission-banner {
   width: 100%;
@@ -310,246 +353,6 @@ nav .nav-link.active {
   color: #4b5563;
 }
 
-
-@media (max-width: 640px) {
-  .hero-title {
-    font-size: 2.1rem;
-  }
-
-  .bag-image {
-    max-width: 135px;
-  }
-
-  .mission-content {
-    grid-template-columns: 1fr;
-  }
-
-  .inner-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-  }
-}
-
-
-.bag-label {
-  width: 100%;
-}
-
-.bag-label h2 {
-  margin: 0 0 6px;
-}
-
-.bag-label p {
-  margin: 0;
-}
-
-
-.bags-section {
-  width: 100%;
-  max-width: 520px;
-  margin: 0 auto;
-  padding: 0 16px 8px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.bags-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 32px;
-}
-
-.bag-card {
-  width: 230px;
-  min-height: 260px;
-  padding: 24px 20px 26px;
-  border-radius: 26px;
-  background: #ffffff;
-  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
-  cursor: pointer;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
-  outline: none;
-}
-
-.bag-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 26px 60px rgba(15, 23, 42, 0.18);
-}
-
-.bag-card:focus-visible {
-  box-shadow: 0 0 0 3px #f97316;
-}
-
-.bag-image {
-  width: 80%;
-  max-width: 150px;
-  height: auto;
-  object-fit: contain;
-  filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.25));
-  margin-bottom: 14px;
-}
-
-.bag-label {
-  width: 100%;
-  color: #111827;
-}
-
-.bag-label h2 {
-  margin: 0 0 6px;
-  font-size: 1.1rem;
-  font-weight: 700;
-}
-
-.bag-label p {
-  margin: 0;
-  font-size: 0.85rem;
-  line-height: 1.45;
-  color: #6b7280;
-}
-
-@media (min-width: 768px) {
-  .bags-section {
-    max-width: 620px;
-    margin: 0 auto;
-  }
-
-  .bags-container {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    gap: 32px;
-  }
-
-  .bag-card {
-    flex: 0 0 240px;
-  }
-}
-
-.bag-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.bag-image {
-  width: 80%;
-  max-width: 150px;
-  height: 150px;
-  object-fit: contain;
-  margin-bottom: 12px;
-}
-
-
-.bags-section {
-  width: 100%;
-  max-width: 720px;
-  margin: 0 auto;
-  padding-top: 10px;
-  text-align: center;
-}
-
-.bags-container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 40px;
-  flex-wrap: nowrap;
-}
-
-.bag-card {
-  width: 260px;
-  min-height: 290px;
-  background: #fff;
-  border-radius: 26px;
-  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  text-align: center;
-
-  padding: 24px 20px;
-}
-
-.bag-image {
-  width: 150px;
-  height: 150px;
-  object-fit: contain;
-  margin-bottom: 16px;
-}
-
-.bag-label {
-  margin-top: 4px;
-}
-
-.bag-label h2 {
-  margin: 0 0 10px;
-  font-size: 1.2rem;
-}
-
-.bag-label p {
-  margin: 0;
-  font-size: 0.9rem;
-  color: #555;
-}
-
-.child-card {
-  display: flex;
-  padding: 16px;
-  border-radius: 20px;
-  background-color: #ffffff;
-  box-shadow: 0 8px 20px rgba(31, 41, 55, 0.08);
-}
-
-.child-info {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.child-about {
-  margin: 0;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  color: #4b5563;
-}
-
-.btn-secondary {
-  white-space: nowrap;
-  padding: 10px 22px;
-  font-size: 0.9rem;
-}
-
-.child-status {
-  margin-top: auto;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.btn-secondary {
-  margin-top: 12px;
-}
-
-.child-status {
-  margin-top: 14px;
-}
-
 .partner-strip {
   margin-top: 10px;
   display: inline-flex;
@@ -560,10 +363,10 @@ nav .nav-link.active {
 }
 
 .partner-logo {
-  height: 28px;          /* adjust if needed */
+  height: 28px;
   width: auto;
   object-fit: contain;
-  filter: drop-shadow(0 1px 3px rgba(0,0,0,0.15));
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.15));
 }
 
 .partner-text {
@@ -580,4 +383,35 @@ nav .nav-link.active {
   color: #6b7280;
   text-align: center;
   line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+  .hero-title {
+    font-size: 2.1rem;
+  }
+
+  .bags-container {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .bag-card {
+    width: 220px;
+    min-height: auto;
+  }
+
+  .bag-image {
+    width: 135px;
+    height: 135px;
+  }
+
+  .mission-content {
+    grid-template-columns: 1fr;
+  }
+
+  .inner-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
 }
