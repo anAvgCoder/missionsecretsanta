@@ -27,7 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
   fetch("children.txt")
     .then(response => response.text())
     .then(text => {
-      // Handle Windows (\r\n) and Unix (\n) line endings
       const lines = text.trim().split(/\r?\n/);
 
       lines.forEach(line => {
@@ -35,7 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const [avatar, title, about, link, rawStatus] = line.split("|");
 
-        // Normalize status: remove spaces/\r and lowercase
         const status = rawStatus.trim().toLowerCase();
         const isAvailable = status === "available";
 
