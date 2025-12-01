@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="child-status">
               <span class="status-badge ${
                 isAvailable ? "status-available" : "status-sponsored"
-              }">${isAvailable ? "Available" : "Sponsored"}</span>
+              }">${isAvailable ? "Available" : "Sponsored (Thank you!)"}</span>
             </div>
           </div>
         `;
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const GOAL = 500;
-  const CURRENT_AMOUNT = 25;
+  const CURRENT_AMOUNT = 39;
 
   const amountSpan = document.getElementById("goal-amount");
   const barFill = document.getElementById("goal-bar-fill");
