@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const GOAL = 1000;
+  const GOAL = 750;
   const CURRENT_AMOUNT = 503;
 
   const amountSpan = document.getElementById("goal-amount");
