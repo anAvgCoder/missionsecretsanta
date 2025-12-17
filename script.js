@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const GOAL = 750;
-  const CURRENT_AMOUNT = 503;
+  const CURRENT_AMOUNT = 639;
 
   const amountSpan = document.getElementById("goal-amount");
   const barFill = document.getElementById("goal-bar-fill");
