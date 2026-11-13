@@ -3,75 +3,88 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Mission • Mission Secret Santa</title>
+  <title>Our Mission · Mission Secret Santa</title>
+  <meta name="description" content="Mission Secret Santa partners with Boise Rescue Mission's City Light shelter so every child there has a gift on Christmas morning." />
+  <link rel="icon" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Libre+Franklin:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <script src="script.js" defer></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="icon" href="favicon.png">
 </head>
-<body>
-  <header class="inner-header">
-    <a href="index.html" class="logo">Mission Secret Santa</a>
-    <nav>
-      <a href="donate.html" class="nav-link">Donate</a>
-      <a href="mission.html" class="nav-link active">Our Mission</a>
-    </nav>
+<body class="fit">
+  <header class="masthead">
+    <div class="wrap">
+      <a href="index.html" class="wordmark">Mission <span>Secret Santa</span></a>
+      <nav class="nav" aria-label="Main">
+        <a href="donate.html">Wish lists</a>
+        <a href="mission.html" aria-current="page">Our mission</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="page">
-    <br><br><br><br><br>
-    <div class="mission-banner">
-      <h1>Our Mission</h1>
-    </div>
-
-    <section class="mission-content">
-      <div class="mission-video-wrapper">
-        <iframe
-          src="https://www.youtube.com/embed/vA18hfY6Mc0"
-          title="Mission Secret Santa"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-       
-      </div>
-
-      <div class="mission-text">
-        
-      <div class="partner-strip">
-    <span class="partner-text">In partnership with</span>
-    <img
-      src="assets/BRMM.png"
-      alt="Shelter Name logo"
-      class="partner-logo"
-    />
-    </div>
-        <p>
-          <br>Mission Secret Santa partners with the Boise Rescue Mission Ministries’ City Light Home for Women and Children’s Shelter to make
-          sure every child wakes up to a gift this year.<br><br> Donations are sent directly to the Mission where they are wrapped and delivered for Christmas.<br><br>Thank you for your support!
+  <main>
+    <div class="wrap mission">
+      <div>
+        <span class="eyebrow">Our mission</span>
+        <h1>A gift to open for every kid at City Light.</h1>
+        <div class="video">
+          <iframe
+            src="https://www.youtube.com/embed/vA18hfY6Mc0"
+            title="Mission Secret Santa video"
+            loading="lazy"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+        <p class="mission-intro">
+          We partner with Boise Rescue Mission Ministries’ City Light Home for Women and
+          Children. Pick a child’s Amazon wish list, and the gift ships straight to the Mission,
+          where staff wrap it and hand it out for Christmas.
         </p>
-        
       </div>
-      
-    </section>
-      <section class="goal-section">
-      <p class="goal-text">
-        Raised: $<span id="goal-amount">0</span> / $1000 goal
-      </p>
 
-      <div class="goal-bar">
-        <div class="goal-bar-fill" id="goal-bar-fill"></div>
-      </div>
-  </section>
+      <section class="thanks" aria-labelledby="thanks-title">
+        <span class="eyebrow">Last Christmas</span>
+        <h2 id="thanks-title">Thank you.</h2>
+        <p>
+          You filled every wish list we posted. Across City Light and the surrounding community,
+          170 children and teens were sponsored or got gifts from the Mission’s Christmas Store.
+        </p>
+
+        <dl class="figures">
+          <div>
+            <dt>$1,372</dt>
+            <dd>given through Mission Secret Santa</dd>
+          </div>
+          <div>
+            <dt>33</dt>
+            <dd>wish lists, every one filled</dd>
+          </div>
+          <div>
+            <dt>170</dt>
+            <dd>kids and teens reached by the Mission</dd>
+          </div>
+        </dl>
+
+        <div class="this-year">
+          <h3>This year: 50 kids, maybe more.</h3>
+          <p>
+            The Mission is putting together a list of 50 children and teens for us, with more if
+            we can take them on. We’ll post the wish lists as soon as they’re ready.
+          </p>
+          <a class="button" href="donate.html">See the wish lists</a>
+        </div>
+      </section>
+    </div>
   </main>
-  <footer class="site-footer">
-      <p>
-        Boise Rescue Mission Ministries is the primary provider of homeless services in the state of Idaho, with five
-        facilities in Ada and Canyon counties. Our homeless ministry serves the men, women, and children of Treasure
-        Valley through shelter, food, addiction recovery, and much more.
-      </p>
-    </footer>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="partner">
+        <span>In partnership with</span>
+        <img src="assets/BRMM.png" alt="Boise Rescue Mission Ministries" />
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
