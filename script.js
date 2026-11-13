@@ -2,6 +2,10 @@
 const GOAL = 1000;
 const RAISED = 0;
 
+// How many kids the Mission gave us. Until children.txt has this many lists,
+// the wish-list page shows a "more lists are on the way" note.
+const EXPECTED_LISTS = 50;
+
 document.addEventListener("DOMContentLoaded", () => {
   hangPresent();
   showProgress();
@@ -88,6 +92,9 @@ function loadWishLists() {
       // Open lists first, keeping the file's order within each group.
       lists.sort((a, b) => Number(b.open) - Number(a.open));
       lists.forEach((list) => grid.appendChild(renderList(list)));
+
+      const more = document.getElementById("wish-more");
+      if (more && lists.length < EXPECTED_LISTS) more.hidden = false;
     });
 }
 

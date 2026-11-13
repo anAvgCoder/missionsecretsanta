@@ -472,18 +472,35 @@ h3 {
   color: var(--ink-soft);
 }
 
+.more-note {
+  margin: 28px 0 0;
+  color: var(--muted);
+  font-style: italic;
+}
+
 .list-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 0 40px;
+  gap: 20px;
 }
 
 .wish {
   display: grid;
   grid-template-columns: 48px 1fr;
   gap: 0 16px;
-  padding: 22px 0 26px;
-  border-top: 1px solid var(--rule);
+  padding: 22px 22px 20px;
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  transition: border-color 0.18s ease;
+}
+
+.wish:hover {
+  border-color: #cdbfa9;
+}
+
+.wish.is-done {
+  background: #fdfbf7;
 }
 
 .wish-emoji {
