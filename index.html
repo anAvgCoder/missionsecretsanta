@@ -4,74 +4,65 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mission Secret Santa</title>
+  <meta name="description" content="Be a Secret Santa for a child at Boise Rescue Mission's City Light shelter. Pick an Amazon wish list and the gift ships straight to the Mission." />
+  <link rel="icon" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Libre+Franklin:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <script src="script.js" defer></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="icon" href="favicon.png">
 </head>
-<body class="home">
-  <div class="center-layout">
-    <header class="hero">
-      <div class="hero-icon">🎁</div>
-      <h1 class="hero-title">
-        <span>Mission</span>
-        <span class="accent">Secret Santa</span>
-      </h1>
-      <p class="hero-subtitle">
-        Connecting Secret Santas with kids in need this Christmas right here in Boise
-      </p>
-
-      <div class="partner-strip">
-    <span class="partner-text">In partnership with</span>
-    <img
-      src="assets/BRMM.png" 
-      alt="Shelter Name logo"
-      class="partner-logo"
-    />
+<body class="fit">
+  <header class="masthead">
+    <div class="wrap">
+      <a href="index.html" class="wordmark" aria-current="page">Mission <span>Secret Santa</span></a>
+      <nav class="nav" aria-label="Main">
+        <a href="donate.html">Wish lists</a>
+        <a href="mission.html">Our mission</a>
+      </nav>
     </div>
-    </header>
+  </header>
 
-    <main>
-      <section class="bags-section">
-        <div class="sled-bar"></div>
-
-        <div class="bags-container">
-          <div class="bag-card" data-target="donate.html" tabindex="0" aria-label="Go to Donate page">
-            <img src="assets/bag-donate.png" alt="Red gift bag for Donate" class="bag-image" />
-            <div class="bag-label">
-              <h2>Donate</h2>
-              <p>Make one's Christmas wish come true</p>
-            </div>
-          </div>
-
-          <div class="bag-card" data-target="mission.html" tabindex="0" aria-label="Go to Our Mission page">
-            <img src="assets/bag-mission.png" alt="Red gift bag for Our Mission" class="bag-image" />
-            <div class="bag-label">
-              <h2>Our Mission</h2>
-              <p>Learn more</p>
-            </div>
-          </div>
-        </div>
-      </section>
-    <section class="goal-section">
-      <p class="goal-text">
-        Raised: $<span id="goal-amount">0</span> / $1000 goal
+  <main>
+    <div class="wrap home">
+      <span class="eyebrow">Boise · Christmas 2026</span>
+      <h1 class="home-title">Mission <em>Secret Santa</em></h1>
+      <p class="home-sub">
+        Christmas presents for the kids at City Light shelter, one Amazon wish list at a time.
       </p>
 
-      <div class="goal-bar">
-        <div class="goal-bar-fill" id="goal-bar-fill"></div>
+      <div class="choices">
+        <a class="choice" href="donate.html">
+          <img src="assets/bag-donate.png" alt="" />
+          <span class="choice-title">Donate</span>
+          <span class="choice-sub">Make one kid’s Christmas wish come true</span>
+        </a>
+        <a class="choice" href="mission.html">
+          <img src="assets/bag-mission.png" alt="" />
+          <span class="choice-title">Our Mission</span>
+          <span class="choice-sub">How it works, and what you did last year</span>
+        </a>
       </div>
-  </section>
-    </main>
-    <footer class="site-footer">
-      <p>
-        Boise Rescue Mission Ministries is the primary provider of homeless services in the state of Idaho, with five
-        facilities in Ada and Canyon counties. Our homeless ministry serves the men, women, and children of Treasure
-        Valley through shelter, food, addiction recovery, and much more.
-      </p>
-    </footer>
-  </div>
+
+      <div class="progress" data-progress>
+        <div class="progress-label">
+          <strong data-raised>$0</strong>
+          <span>raised of our <span data-goal>$1,000</span> goal</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" data-fill></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="partner">
+        <span>In partnership with</span>
+        <img src="assets/BRMM.png" alt="Boise Rescue Mission Ministries" />
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

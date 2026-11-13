@@ -3,33 +3,66 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Donate • Mission Secret Santa</title>
+  <title>Wish Lists · Mission Secret Santa</title>
+  <meta name="description" content="Amazon wish lists for children and teens at Boise Rescue Mission's City Light shelter." />
+  <link rel="icon" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Libre+Franklin:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <script src="script.js" defer></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="icon" href="favicon.png">
 </head>
 <body>
-  <header class="inner-header">
-    <a href="index.html" class="logo">Mission Secret Santa</a>
-    <nav>
-      <a href="donate.html" class="nav-link active">Donate</a>
-      <a href="mission.html" class="nav-link">Our Mission</a>
-    </nav>
+  <header class="masthead">
+    <div class="wrap">
+      <a href="index.html" class="wordmark">Mission <span>Secret Santa</span></a>
+      <nav class="nav" aria-label="Main">
+        <a href="donate.html" aria-current="page">Wish lists</a>
+        <a href="mission.html">Our mission</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="page">
-    <h1>Donate</h1>
-    <p class="page-subtitle">
-      <!-- Become a Secret Santa! - Please note that sponsors may take up to 24 hours to be updated -->
-      Become a Secret Santa! - More coming soon!
-    </p>
+  <main>
+    <div class="wrap">
+      <header class="page-head">
+        <span class="eyebrow">Christmas 2026</span>
+        <h1>Wish lists</h1>
+        <p class="lede">
+          Choose a list, order from it on Amazon, and the gift ships straight to the Mission.
+          Lists marked sponsored already have a Secret Santa. It can take up to a day for a list
+          to show as sponsored.
+        </p>
+      </header>
 
-     <section class="children-grid" id="children-grid">
-      </section>
+      <div id="wish-lists" class="list-grid" aria-live="polite"></div>
 
+      <p id="wish-more" class="more-note" hidden>
+        More lists are on the way. We’re adding them as we finish them, so check back soon.
+      </p>
+
+      <div id="wish-empty" class="notice" hidden>
+        <h2>The lists are on their way.</h2>
+        <p>
+          The Mission is putting together wish lists for 50 children and teens this year. We’ll
+          post them here as soon as they arrive, so check back soon.
+        </p>
+      </div>
+    </div>
   </main>
+
+  <footer class="footer footer-full">
+    <div class="wrap">
+      <p>
+        Boise Rescue Mission Ministries is the primary provider of homeless services in Idaho,
+        with five facilities in Ada and Canyon counties, serving the men, women and children of
+        the Treasure Valley through shelter, food, addiction recovery and more.
+      </p>
+      <div class="partner">
+        <span>In partnership with</span>
+        <img src="assets/BRMM.png" alt="Boise Rescue Mission Ministries" />
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
